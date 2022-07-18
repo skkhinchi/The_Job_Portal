@@ -13,5 +13,9 @@ namespace DemoWebApp.Models
         public int RollNumber { get; set; }
         public int Standard { get; set; }
         public string Email { get; set; }
+
+        public string Section { get; set; }
+
+        public string year_of_enrollment { get; set; }
     }
 }

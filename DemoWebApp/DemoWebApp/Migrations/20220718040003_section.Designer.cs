@@ -3,14 +3,16 @@ using DemoWebApp.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace DemoWebApp.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220718040003_section")]
+    partial class section
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -34,14 +36,8 @@ namespace DemoWebApp.Migrations
                     b.Property<int>("RollNumber")
                         .HasColumnType("int");
 
-                    b.Property<string>("Section")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<int>("Standard")
                         .HasColumnType("int");
-
-                    b.Property<string>("year_of_enrollment")
-                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
